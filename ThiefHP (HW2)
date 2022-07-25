@@ -1,0 +1,11 @@
+public class ThiefHP {
+	public static void main(String[] args) {
+		int WeaponDMG = 20;
+		int ThiefHP = 500;
+		int HowMuchHits = ThiefHP / WeaponDMG; 
+		
+		System.out.println(HowMuchHits);
+		
+	}
+
+}
