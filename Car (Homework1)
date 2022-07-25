@@ -1,0 +1,12 @@
+public class Varible {
+	public static void main(String[] args) {
+		String CarName = "Batmobile";
+		Boolean IsFlying = false;
+		int passagersQu = 4;
+		
+		System.out.println("Flying " + IsFlying);
+		System.out.println("Name " + CarName);
+		System.out.println("Quantity of passagers " + passagersQu);
+		
+	}
+}
