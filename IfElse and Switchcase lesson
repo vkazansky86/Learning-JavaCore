@@ -1,0 +1,89 @@
+public class IfElseConstruction {
+	public static void main(String[] args) {  
+		int hp = 43;
+		if (hp < 50) {
+			System.out.println("Need to heal");
+		} else {
+			System.out.println("Heal no needed");
+		}
+	}
+}
+
+////////////////////IFELSE////////////////////////////
+
+public class IfElseConstruction {
+	public static void main(String[] args) {
+		int hp = 2;
+		if (hp < 70 && hp > 50) {
+			System.out.println("Healing with weak potion");
+		} else if (hp < 50 && hp > 30) {
+			System.out.println("Healing with medium potion");
+		} else {
+			System.out.println("Healing with strong potion");
+		}
+	}
+}
+///////////SWITCHCASE////////////////////////////////
+
+public class IfElseConstruction {
+	public static void main(String[] args) {
+		String namePotion = "Damage";
+		switch (namePotion) {
+		case "Damage":                                                                           // if (namePotion == "Damage")
+			System.out.println("We've got damage potion");
+			break;
+		case "Magic":
+			System.out.println("We've got magic potion");
+			break;
+		case "Heal":
+			System.out.println("We've got healing potion");
+			break;
+		default:
+			System.out.println("We've got unknown potion");
+			break;
+		}
+	}
+}
+////////////////HOMEWORK#1////////////////////////////
+
+package Homeworks;
+
+public class Homework4p1 {
+	public static void main(String[] args) {
+		int AutoStrenght = 70;
+		int FuelQuantity = 70;
+		
+		if (AutoStrenght <=30 && FuelQuantity <= 30) {
+			System.out.println("Repair and Refill needed");
+		} else if (AutoStrenght <=30 && FuelQuantity >= 30) {
+			System.out.println("Repair needed");
+		} else if (AutoStrenght >=30 && FuelQuantity <= 30) {
+			System.out.println("Refill needed");
+		} else {
+			System.out.println("Car is ok, nothing needed");
+		}
+	}
+}
+////////////////HOMEWORK#2////////////////////////////
+
+package Homeworks;
+
+public static void main(String[] args) {
+		
+		String CharacterName = "Tyler";
+		
+		switch(CharacterName) {
+		case "Sheriff":
+			System.out.println("Sheriff");
+			break;
+		case "Thief":
+			System.out.println("Thief");
+			break;
+		case "Bandit":
+			System.out.println("Bandit");
+		default: 
+			System.out.println("Civilian");
+		   }	
+    }
+}
+
