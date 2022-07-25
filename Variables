@@ -1,0 +1,19 @@
+public class Varible {
+	public static void main(String[] args) {
+		boolean logic = true;  //true / false
+		byte b = 127;          //-128 / 127
+		char ch = 66;         // char code
+		short sh = 32767;      // -32768 / 32767
+		int i = 2_300_000;     // up to 2 300 000
+		long l = 20_000_000L;   // up to 20 000 000
+		float f = 8.2F;        // float - F
+		double d =8.3;
+		
+		String s = "Hello world!"; // ссылочная переменная
+		
+		System.out.println(ch);
+		
+		
+	}
+
+}
