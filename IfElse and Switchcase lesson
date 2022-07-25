@@ -81,6 +81,7 @@ public static void main(String[] args) {
 			break;
 		case "Bandit":
 			System.out.println("Bandit");
+			break;
 		default: 
 			System.out.println("Civilian");
 		   }	
