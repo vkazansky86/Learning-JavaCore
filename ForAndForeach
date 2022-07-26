@@ -1,0 +1,93 @@
+public class ForAndForeachConstruction {
+	public static void main(String[] args) {
+		int number = 1234;
+		
+		for(int i = 0; i < 4; i++) {
+			System.out.println(number % 10);        // выводит числа, получившиеся в виде остатка после деления на 10 по 4 итерациям (4, 3, 2, 1)
+			number /= 10;
+		}
+	}
+}
+///////////////////////поиск минимального числа////////////////////////////////////////
+
+public class ForAndForeachConstruction {
+	public static void main(String[] args) {
+		int number = 5922;
+		int min = 9;
+		
+		for(int i = 0; i < 4; i++) {
+			int n = number % 10;
+			if ((n) < min) {
+				min = n;
+			}
+			number /= 10;
+		}
+		
+		System.out.println(min);
+	}
+}
+///////////////////////forEach////////////////////////////////////////////////////////
+
+public class ForAndForeachConstruction {
+	public static void main(String[] args) {
+		String alphabet = "ABCDEF";
+		
+		for (char a: alphabet.toCharArray()) {                 //toCharArray - приводит string к char
+			System.out.print(a);
+		}
+	}
+}
+//////////////////Forif//////////////////////
+
+public class ForAndForeachConstruction {
+	public static void main(String[] args) {
+		String alphabet = "ABCDEFa a a";
+		int count = 0;
+		
+		for (char a: alphabet.toCharArray()) {              //увеличивает значение count на количество 'a' в строке
+			if (a == 'a') {
+				count ++;
+			}
+		}
+		
+		System.out.println(count);
+	}
+}
+////////////////////Homework6p1/////////////////
+
+package Homeworks;
+
+public class Homework6p1 {
+
+	public static void main(String[] args) {
+		int lengTH = 3456788;
+		int max = 3;
+		
+		for(int i = 0; i < 5; i++) {                         // поиск минимальной цифры в числе
+			int n = lengTH % 10;
+			if ((n) > max) {
+				max = n;
+			}
+			
+		}
+		
+		System.out.println(max);
+
+	}
+}
+//////////////////////////Homework6p2/////////////
+
+package Homeworks;
+
+public class Homework6p2 {
+	public static void main(String[] args) {
+		
+		String spaceAD = "Our station is best ever";
+		int count = 0;
+		
+		for (char a: spaceAD.toCharArray()) {                
+			System.out.println(a);                                 //выводит все символы столбиком
+			
+	    }  
+   }
+}
