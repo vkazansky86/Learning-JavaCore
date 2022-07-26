@@ -55,3 +55,16 @@ public class StringOperation {
 		System.out.println(nameSurname.toLowerCase());    // nameSurname.toLowerCase() - в нижний регистр, nameSurname.toUpperCase() - в верхний регистр
 	}
 }
+///////////////////////////Homework5///////////////////////////////////////////////////////////////////
+
+package Homeworks;
+
+public class Homework5 {
+
+	public static void main(String[] args) {
+		String fullString = "ACxXYZ";
+		String thirdSym = fullString.substring(2,3);
+		String x = "x";
+		System.out.println(thirdSym.equals(x));	
+	}
+}
