@@ -1,0 +1,57 @@
+public class StringOperation {
+
+	public static void main(String[] args) {
+		String name = "Maxim";      
+		name += " Tichomirov";                     // конкатинация (сложение строк)
+		System.out.println(name);
+	}
+}
+/////////////////////////////equals//////////////////////////////////////////////
+
+public class StringOperation {
+
+	public static void main(String[] args) {
+		String s = "Hello";
+		String b = "Hello";
+		System.out.println(s.equals(b));          // сравнение строк   // s.equalsIgnoreCase(b) - сравнение строк игнорирование регистра
+	}
+}
+///////////////////////////////передача значения в строку/////////////////////////////////////////////////
+
+public class StringOperation {
+
+	public static void main(String[] args) {
+		short sh = 15;
+		String random = String.valueOf(sh);
+		System.out.println(random);
+	}
+}
+///////////////////////////////////indexOF////////////////////////////////////////////////////////////////
+
+public class StringOperation {
+
+	public static void main(String[] args) {
+		String nameSurname = "Maxim Tichomirov";
+		System.out.println(nameSurname.indexOf('T'));
+	}
+}
+////////////////////////////////substring////////////////////////////////////////////////////////////////
+
+public class StringOperation {
+
+	public static void main(String[] args) {
+		String nameSurname = "Maxim Tichomirov";
+		String surname = nameSurname.substring(6, nameSurname.length());    // nameSurname.length() - конец массива
+		System.out.println(surname);
+	}
+}
+////////////////////////////upper/loweCase//////////////////////////////////////////////////////////////
+
+public class StringOperation {
+
+	public static void main(String[] args) {
+		String nameSurname = "Maxim Tichomirov";
+		
+		System.out.println(nameSurname.toLowerCase());    // nameSurname.toLowerCase() - в нижний регистр, nameSurname.toUpperCase() - в верхний регистр
+	}
+}
