@@ -1,0 +1,99 @@
+public class WhileConstruction {
+
+	public static void main(String[] args) {
+		int Dmg = 10;
+		int MobHP = 100;
+		
+		while (MobHP > 0) {                              // пока здоровье не снизится до 0, наносим удары по 10
+			
+			MobHP -= Dmg;
+			
+		}
+		System.out.println(MobHP);
+	}
+}
+//////////////////////////////////Continue////////////////////////////////////////////////////////////////////
+
+public class WhileConstruction {
+
+	public static void main(String[] args) {
+		int Dmg = 10;
+		int MobHP = 100;
+		boolean b = true;                                  //boolean b = true //удар проходит   boolean b = false //удар блокируется
+		int count = 0;
+		
+		while (MobHP > 0) {
+			
+			if (b) {
+				b = false;                                    //блокируем удар                
+				System.out.println("Blocked");                //выводим сообщение "Blocked"
+				count++;                                      //счетчик ударов
+				continue;                                     //продолжаем
+			}
+			MobHP -= Dmg;
+			count ++;                                       //пока здоровье не снизится до 0, наносим удары по 10
+			
+		}
+		System.out.println(MobHP);                        //выводим здоровье
+		System.out.println(count);                        //выводим счетчик ударов
+	}
+}
+////////////////////////////DoWhile///////////////////////////////////////////////////////////////
+
+public class WhileConstruction {
+  public static void main(String[] args) {
+	  int i = 17;
+	  
+	  do {
+		  System.out.println("Text");                   //выводим text
+		  i--;                                          // уменьшаем i на 1
+	  } while (i > 15);                               // пока i не станет меньше 15 (выводит в итоге 2 раза)
+   }
+ }
+ ////////////////////////Homework7p1//////////////////////////////////////////////////////////////
+ 
+ package Homeworks;
+
+public class Homework7p1 {
+
+	public static void main(String[] args) {
+		int Attemptcount = 1;
+		int n = 15;
+		int orkAnswer = 16;
+		
+		while(Attemptcount <= 5) {
+			if (orkAnswer == n) {
+				System.out.println("Right");
+				break;
+			} else if (orkAnswer < n) {
+				System.out.println("Less");
+			} else if (orkAnswer > n) {
+				System.out.println("Bigger");
+			}  
+			Attemptcount ++;
+			orkAnswer --;
+		}		
+	}
+}
+/////////////////////////Homework7p2//////////////////////////////////////////////////////////////////
+
+package Homeworks;
+
+public class Homework7p2 {
+	public static void main(String[] args) {
+		int melonWeight = 0;
+	
+		while (melonWeight <= 50) {
+			
+			melonWeight += 5;
+			
+			if(melonWeight < 50) {
+				System.out.println("Carry on");
+			} else if(melonWeight == 50) {
+				System.out.println("Gather");
+				break;
+			}
+		}	
+  }
+}
+
