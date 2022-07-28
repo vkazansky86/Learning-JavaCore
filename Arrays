@@ -1,0 +1,118 @@
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] roles = {"Rogue","Mage","Guardian"};    //создаем массив и присваиваем значения
+         
+                                                     //можно также присвоить построчно: String[] names = new String[3]  names[0] = "Andrew"; names[1] = "Maxim"; 
+                                                       names[2] = "Ruslan" 
+         
+		int[] damages = {10, 5, 15};
+		
+		for (int i = 0; i < roles.length; i++) {         //присваиваем всем ячейкам массива значение "Abracadabra"      
+			roles[i] = "Abracadabra";
+		}
+		
+		for (String role: roles) {                       //создаем переменную role и выводим каждую роль из массива
+			System.out.println(role);                      //for each для массивов используется чтобы искать значения, для изменения значений используем цикл for
+			
+		}
+	}	
+}
+////////////////////////////////////EXAMPLE1///////////////////////////////////////////////////////////////////////////
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] roles = {"Rogue","Mage","Guardian"};
+		int[] damages = {10, 5, 15};
+		
+		for (int i =0; i < roles.length; i++) {
+			System.out.println("Role " + roles[i] + " have damage is " + damages[i]);   //выводим каждой роли соответствующее значение повреждения
+		}	
+	}	
+}
+/////////////////////////////////////EXAMPLE2//////////////////////////////////////////////////////////////////////////
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] roles = {"Rogue","Mage","Guardian"};
+		int[] damages = {10, 5, 15};
+		
+		for (int i =0; i < roles.length; i++) {
+			if (roles[i] == "Rogue") {
+				System.out.println("Good");                     //выводим Good столько раз, сколько есть ролей Rogue в массиве
+			}
+		}	
+	}	
+}
+/////////////////////////////////НЕПРАВИЛЬНОЕ КОПИРОВАНИЕ МАССИВА////////////////////////////////////////////////////////
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] roles = {"Rogue","Mage","Guardian"};
+		String[] rolesRussian = roles;
+		rolesRussian[0] = "Разбойник";                       //в данном случае будет изменен не элемент массива rolesRussian a элемент массива roles  !!!ОШИБКА!!!
+		
+		System.out.println(roles[0]);	
+	}	
+}
+/////////////////////////////////CLONE////////////////////////////////////////////////////////////////////////////////////
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] roles = {"Rogue","Mage","Guardian"};
+		String[] rolesRussian = roles.clone();             //метод clone копирует значения массива а не ссылку на предыдущий массив, в данном случае будет изменен элемент 
+		rolesRussian[0] = "Разбойник";                       массива rolesRussian
+		
+		System.out.println(roles[0])		
+	}	
+}
+///////////////////////////////Homework8A//////////////////////////////////////////////////////////////////////////////////
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] Planets = {"Imperium", "Elisium", "Vivian", "Gadja", "Ogrimmar"};
+    
+		
+		for(String planet: Planets) {
+			System.out.println(planet);                       //выводим названия из всех ячееек
+		}
+	}
+}
+////////////////////////////Homework8B//////////////////////////////////////////////////////////////////////////////////////
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] Names = {"Ivan", "Elisey", "Vivian", "Gadja", "Ogrimmar"};                 //создаем массив имен
+		String[] Cvs = {"Good", "Bad", "Good(:", "Stupid('","Middle"};                      //создаем массив CV
+		int [] scores = {34, 12, 45, 78, 44};                                               //cоздаем массив результатов
+		String[] Descision = Cvs.clone();                                                   //создаем массив решений по каждому, клонируем туда Cvs
+		String[] Finaldesc = new String[1];                                                 //создаме массив для финального решения
+		
+		
+		for (int i = 0; i < Descision.length; i++) {                                        //итерируем массив по условиям
+		if(Descision[i] =="Good(:") {                                                       //если в Cvs есть "Good(:" то перезаписываем соотв. ячейку Fired
+			Descision[i] = "Fired";
+		} else if (scores[i] < 25) {                                                        //если в scores баллов меньше 25 то перезаписываем соотв. ячейку Fired
+			Descision[i] = "Fired";
+		} else {
+			Descision[i] = "Hired";                                                           //если ни одно условие не сработало то перезаписываем соотв. ячейку Hired
+		}
+		
+		for (int q = 0; q < Finaldesc.length; q++) {                                        //записываем в Finaldesc итерируя имя - финальное решение
+			Finaldesc[q] = Names[i] + " - " + Descision[i];	
+		}	
+	  
+		for (String desc: Finaldesc) {                                                      //выводим последовательно все значения Finaldesc                     
+			System.out.println(desc);
+		}
+	 }
+  }
+}
+
+
