@@ -1,0 +1,39 @@
+import java.util.logging.*;                                                      //импорт библиотеки
+
+public class Log {
+	public static void main(String[] args) {
+		Logger LOG = Logger.getLogger(Log.class.getName());                          //получение логгера
+		LOG.setLevel(Level.INFO);                                                    //настройка уровня логгера
+		ConsoleHandler ch = new ConsoleHandler();                                    //создание ConsoleHandler
+		LOG.addHandler(ch);                                                          //добавление ConsoleHandler к Логгеру
+		SimpleFormatter sf = new SimpleFormatter();                                  //создание SimpleFormatter *можно задать также XML
+		ch.setFormatter(sf);                                                         //добавление к ConsoleHandler ch
+		
+		//программа, которая что то делает
+		LOG.info("Programm is doing something");                                     //вывод лога
+  }
+}
+/////////////////////////////HOMEWORK9P1/////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.logging.*;
+
+public class Log {
+	public static void main(String[] args) {
+		Logger LOG = Logger.getLogger(Log.class.getName());
+		LOG.setLevel(Level.INFO);
+		ConsoleHandler ch = new ConsoleHandler();
+		LOG.addHandler(ch);
+		SimpleFormatter sf = new SimpleFormatter();
+		ch.setFormatter(sf);
+		
+		String hp = "low health point";
+		LOG.info("Ok");
+		
+		if(hp == "low health point") {
+			LOG.info("Ok");
+			System.out.println("Need healing");
+			
+		}
+		LOG.info("Ok");
+  }
+}
