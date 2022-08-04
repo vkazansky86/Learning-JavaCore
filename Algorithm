@@ -28,3 +28,4 @@ public class Homework8p1 {
 		       System.out.println("Maximum array value " + max);
      }
   }
+}
