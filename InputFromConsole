@@ -1,0 +1,114 @@
+import java.util.Scanner;
+
+public class InputFromConsole {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Введите целое число: ");
+		int x = scanner.nextInt();
+		System.out.println("Ваше число 7 " + x);
+	}
+}
+//////////////////ВВОД STRING///////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+public class InputFromConsole {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Left - Horse, Right - Yourself, Center - Happyness");
+		String desc = scanner.next();     //nextLine считывает строку
+		switch (desc) {
+		case "Left":
+		     System.out.println("Horse");
+		     break;
+		case "Right":
+			System.out.println("Yourself");
+		    break;
+		case "Center":
+			System.out.println("Congrats");
+		    break;
+		default:
+			System.out.println("No exists");
+
+		}
+	}
+}
+//////////////////////ПЕРЕДАЧА ДАННЫХ В МАССИВ ЧЕРЕЗ SCANNER//////////////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+public class InputFromConsole {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner("Maxim Andrey Pankratiy");         //запись данных в scanner
+		String[] names = new String[3];
+		
+		for (int i = 0; i < names.length; i ++) {
+			names[i] = scanner.next();                                    //передача данных в массив через итерирование
+		}
+		
+		for (String name: names) {
+			System.out.println(name);                                    //вывод значений массива
+		}
+    }
+}
+//////////////////////HOMEWORK10P1//////////////////////////////////////////////////////////////////////////
+
+package Homeworks;
+import java.util.Scanner;
+
+public class Homework10p1 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter your name and surname");
+		
+		String name = scanner.next();
+		String surname = scanner.next();
+		
+		System.out.println(" ");
+		System.out.println("Your name - " + name );
+		System.out.println("Your surname - " + surname );
+		
+	 }
+ }
+ //////////////////////HOMEWORK10P2///////////////////////////////////////////////////////////////////////////
+ 
+ package Homeworks;
+
+import java.util.Scanner;
+
+public class Homework10P2 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter int");
+		
+		int a = scanner.nextInt();
+		
+		System.out.println("Enter boolean NOTE: ONLY true OR false");
+		
+		boolean b = scanner.nextBoolean();
+		
+		System.out.println("Enter String");
+		
+		String c = scanner.next();
+		
+		System.out.println("Enter float");
+		
+		Float d = scanner.nextFloat();
+		
+		System.out.println("Enter double");
+		
+		Double e = scanner.nextDouble();
+		
+		System.out.println("INT - " + a);
+		System.out.println("BOOL - " + b);
+		System.out.println("String - " + c);
+		System.out.println("Float - " + d);
+		System.out.println("Double - " + e);
+	
+  }
+}
