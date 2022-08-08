@@ -1,0 +1,141 @@
+
+public class Functions {
+
+	public static void main(String[] args) {
+		startEngine();
+		
+	}
+	
+	public static void startEngine() {                        //функция
+		try {
+		Thread.sleep(5000);                                     //функция задержки
+	} catch (InterruptedException e) {                        //обработчик функции для поиска исключений
+		e.printStackTrace();
+	}
+	System.out.println("Двигатель заведен");
+  }
+///////////////////////////ФУНКЦИЯ СЛОЖЕНИЯ/////////////////////////////////////////////////////////////////////////////////////
+
+public class Functions {
+
+	public static void main(String[] args) {
+		int x = 5;
+		int y = 3;
+		int sum = sum(3,5);
+		System.out.println(sum);
+	}
+	
+	public static int sum(int x, int y) {
+	    
+		return x + y;
+  }
+}
+///////////////////////////ФУНКЦИЯ РАНДОМНЫХ ПОЖЕЛАНИЙ///////////////////////////////////////////////////////////////////////////
+
+public class Functions {
+
+	public static void main(String[] args) {
+		String s = sum("Maксим");
+		System.out.println(s);		
+	}
+	
+	public static String sum(String name) {
+		int random = (int) (Math.random()*3);                   //генератор рандомных чисел от 0 до 2
+		String result = "";
+	    
+		switch (random) {
+		case 0:
+			result +=name + ", удачи!";
+			break;
+		case 1:
+			result +=name + " , счастья!";
+			break;
+		case 2:
+			result +=name + ",  веселья!";
+			break;
+		}
+		
+		return result;                                         //функция возвращает пожелание в зависимости от выпавшего рандомного числа
+     
+	}
+}
+///////////////////////////////////HOMEWORK11P1//////////////////////////////////////////////////////////////////////////////////////
+
+package Homeworks;
+
+public class Homework11p1 {
+
+	public static void main(String[] args) {
+	startWork();	
+
+	} public static void startWork() {
+		System.out.println("За работу!");
+	}
+}
+////////////////////////////////////HOMEWORK11P2///////////////////////////////////////////////////////////////////////////////////////
+
+package Homeworks;
+
+import java.util.Scanner;
+
+public class Homework11p2 {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter fuel");
+		
+		int fuel = scanner.nextInt();
+		
+		System.out.println("Enter status NOTE: ONLY Broken, Damaged or Servicable");
+		
+		String status = scanner.next();
+		
+	fillandRepair(fuel,status);
+	
+	}
+	public static void fillandRepair(int fuel, String status) {
+		
+        int fuel1 = fuel;
+        String status1 = status;
+        int delayF = 0;
+        int delayS = 0;
+        int delay = 0;
+	    
+		switch (fuel1) {
+		case 10:
+			delayF = 9000;
+			break;
+		case 20:
+			delayF = 8000;
+			break;
+		case 30:
+			delayF = 7000;
+			break;
+		default:
+			System.out.println("Fuel volume exception");
+			break;	
+		}
+		
+		switch (status1) {
+		case "Broken":
+			delayS = 5000;
+			break;
+		case "Damaged":
+			delayS = 3000;
+			break;
+		case "Serviceable":
+			delayS = 0;
+			break;
+		}
+		
+		delay = delayF + delayS;
+		try {
+			Thread.sleep(delay);                                     
+		} catch (InterruptedException e) {                       
+			e.printStackTrace();
+		}
+		System.out.println(delay);
+	}
+
+}
+
