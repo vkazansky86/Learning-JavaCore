@@ -1,0 +1,43 @@
+
+public class StaticMethodsandVariables {
+	static int counter = 0;
+	
+
+	
+	public static void main(String[] args) {
+		plusPlus();
+		plusPlus();
+		plusPlus();
+		plusPlus();
+		System.out.println(counter);
+	}
+	
+	private static void plusPlus() {
+		counter++;
+	}
+}
+//////////////////////Homework12/////////////////////////////////////////////////////////////////////
+
+package Homeworks;
+
+public class Homework12 {
+
+	public static void main(String[] args) {
+    
+    for(int i = 0; i < 100; i++) {
+    	
+    	if (i % 2 == 0) {
+    		doItSomething();
+    	} 
+    	
+      }
+
+	} 
+	
+	private static void doItSomething() {
+		
+		System.out.println("i do something");
+		
+    }
+
+}
